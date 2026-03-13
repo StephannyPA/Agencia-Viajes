@@ -1,0 +1,523 @@
+/* GENERAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#e4e4e4;
+line-height:1.6;
+}
+
+
+h2{
+margin-bottom:40px;
+text-align:center;
+font-size:32px;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+/* HEADER */
+
+/* menú */
+
+header{
+position:absolute;  
+top:0;
+left:0;
+
+width:100%;
+
+padding:20px 0;
+
+z-index:1000;
+
+}
+
+.menu{
+
+display:flex;
+
+justify-content:flex-end;
+
+gap:25px;
+
+list-style:none;
+
+margin:0;
+padding:0;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:500;
+
+}
+
+nav a:hover{
+border-bottom:2px solid white;
+}
+
+/* banner */
+
+
+.banner img{
+width:100%;
+height:99vh;   
+object-fit:cover;
+display:block;
+}
+
+.banner::after{
+
+content:"";
+
+position:absolute;
+left:0;
+bottom:0;
+
+width:100%;
+height:120px;
+
+background:linear-gradient(
+to bottom,
+rgba(255,255,255,0),
+rgba(255,255,255,1)
+);
+
+}
+
+.banner-texto{
+
+ position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+
+}
+
+.banner-texto h2{
+font-size:60px;
+font-weight:bold;
+
+text-shadow:
+1px 1px 0 #000,
+2px 2px 0 #000,
+3px 3px 0 #000,
+4px 4px 8px rgba(0,0,0,0.6);
+}
+
+.banner-texto p{
+font-weight:bold;
+font-size:40px;
+letter-spacing:2px;
+color: #000;
+}
+
+/* Banner texto responsive */
+@media (max-width: 576px) {    
+
+    .banner-texto h2 {
+        font-size: 40px; 
+        line-height: 1.2; 
+    }
+
+    .banner-texto p {
+        font-size: 17px; 
+    }
+
+    .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* ajusta la altura de tu banner */
+    overflow: hidden;
+}
+
+}
+
+/* POR QUE CON NOSOTROS */
+
+.por-que-nosotros{
+background:#ffffff;
+padding:75px 0;
+}
+
+.beneficio{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+}
+
+.icono{
+
+font-size:28px;
+color:#ff6b6b;
+
+}
+
+.beneficio h3{
+
+margin:0;
+font-weight:bold;
+
+
+}
+
+/* mobile */
+
+@media (max-width:576px){
+
+.beneficio{
+
+flex-direction:column;
+text-align:center;
+margin-bottom:30px;
+}
+
+.icono{
+
+font-size:32px;
+
+}
+
+}
+
+/* PASOS PARA REGISTRAR VIAJE */
+
+
+.pasos-viaje{
+
+padding:80px 0;
+background:#f8f9fa;
+
+}
+
+
+.imagen-pasos img{
+
+width:100%;
+border-radius:12px;
+
+}
+
+
+.paso{
+
+background:white;
+
+padding:25px;
+
+border-radius:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+text-align:center;
+
+transition:0.3s;
+
+}
+
+.paso:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+
+.icono-paso{
+
+font-size:35px;
+
+color:#ff6b6b;
+
+margin-bottom:10px;
+
+}
+
+
+.paso h3{
+
+font-size:18px;
+font-weight:bold;
+
+margin-bottom:8px;
+
+}
+
+
+.paso p{
+
+font-size:14px;
+color:#555;
+
+}
+
+/* SECCION CTA VIAJE */
+
+.cta-viaje{
+padding:120px 0;
+}
+
+
+.btn-cta{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 30px;
+
+background:#ff6b6b;
+color:white;
+
+text-decoration:none;
+font-weight:bold;
+
+border-radius:30px;
+
+}
+
+/* DESTINOS POPULARES */
+
+.destinos-populares{
+padding:80px 0;
+background:#f1f3f5;
+}
+
+.grid-destinos{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+grid-auto-rows:200px;
+gap:15px;
+
+margin-top:40px;
+}
+
+.destino{
+position:relative;
+overflow:hidden;
+border-radius:10px;
+display:block;
+}
+
+.destino img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.overlay{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6);
+
+color:white;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+opacity:0;
+transition:0.3s;
+
+}
+
+.overlay h3{ 
+
+    font-size:30px; 
+}
+
+.destino:hover .overlay{
+opacity:1;
+}
+
+
+.destino.grande{
+grid-column:span 2;
+grid-row:span 2;
+}
+
+
+@media (max-width:576px){
+
+.grid-destinos{
+grid-template-columns:1fr;
+}
+
+.destino.grande{
+grid-column:span 1;
+grid-row:span 1;
+}
+
+.overlay{
+opacity:1;
+justify-content:flex-end;
+align-items:flex-start;
+}
+
+.overlay h3{
+
+position:absolute;
+bottom:20px;
+left:20px;
+
+color:white;
+font-size:22px;
+font-weight:bold;
+
+text-shadow:0 2px 10px rgba(0,0,0,0.6);
+
+}
+
+
+}
+
+/* PROMOCIONES */
+
+.promo-viaje{
+
+padding:120px 0;
+
+}
+
+
+/* TOUR PAQUETES */
+
+.tour-paquetes{
+background:#b197fc;
+padding:80px 0;
+}
+
+.paquete{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+min-height:200px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.paquete h3{
+margin-bottom:15px;
+}
+
+.paquete-card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.paquete-card:hover{
+transform:translateY(-5px);
+}
+
+.paquete-card img{
+height:200px;
+object-fit:cover;
+}
+
+.paquete-info{
+padding:20px;
+text-align:center;
+}
+
+.paquete-info h3{
+margin-bottom:10px;
+}
+
+.duracion{
+font-size:14px;
+margin-bottom:10px;
+color:#555;
+}
+
+.precio{
+font-size:18px;
+margin:15px 0;
+color:#ff6b6b;
+}
+
+.btn-paquete{
+display:inline-block;
+padding:10px 20px;
+background:#ff6b6b;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+
+.btn-paquete:hover{
+background:#fa5252;
+}
+
+/* FOOTER */
+
+footer{
+background:#343a40;
+color:white;
+padding:40px 0;
+text-align:center;
+}
+
+
+/* BOTONES DE LAS SECCIONES */
+
+
+.btn-vermas{
+display:inline-block;
+padding:12px 25px;
+background:#ff6b6b;
+color:white;
+text-decoration:none;
+border-radius:6px;
+margin-top:20px;
+}
+
+.btn-vermas:hover{
+background:#fa5252;
+}
