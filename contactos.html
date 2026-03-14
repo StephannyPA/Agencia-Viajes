@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Nuestra Agencia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #2a9d8f;
+            --dark: #264653;
+            --accent: #e76f51;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            font-family: 'Segoe UI', sans-serif;
+            color: var(--dark);
+        }
+
+        /* Hero Secundario (Mismo estilo que los anteriores) */
+        .contact-hero {
+            background: linear-gradient(rgba(38, 70, 83, 0.8), rgba(38, 70, 83, 0.8)), 
+                        url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        /* Tarjeta de Contacto */
+        .contact-container {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            margin-bottom: 80px;
+        }
+
+        .contact-info-side {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px;
+            height: 100%;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .info-item i {
+            background: rgba(255,255,255,0.1);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 20px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Formulario */
+        .contact-form-side {
+            padding: 50px;
+        }
+
+        .form-control {
+            border: 1px solid #eee;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(42, 157, 143, 0.1);
+            outline: none;
+        }
+
+        .btn-send {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-send:hover {
+            background-color: #21867a;
+            transform: translateY(-2px);
+        }
+
+        /* Mapa decorativo */
+        .map-placeholder {
+            height: 200px;
+            background: #e9ecef;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            color: #adb5bd;
+            border: 2px dashed #dee2e6;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="contact-hero">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Ponte en Contacto</h1>
+            <p class="lead">¿Tienes dudas sobre tu próximo viaje? Estamos aquí para ayudarte.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="contact-container">
+            <div class="row g-0">
+                
+                <div class="col-12 col-lg-5">
+                    <div class="contact-info-side">
+                        <h3 class="mb-4">Información de contacto</h3>
+                        <p class="text-white-50 mb-5">Visítanos en nuestra oficina central o escríbenos por cualquiera de nuestros canales oficiales.</p>
+                        
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h6 class="mb-0">Ubicación</h6>
+                                <small class="text-white-50">Av. Principal 123, Ciudad de Aventuras</small>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h6 class="mb-0">Teléfono</h6>
+                                <small class="text-white-50">+51 987 654 321</small>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h6 class="mb-0">Correo Electrónico</h6>
+                                <small class="text-white-50">info@tuagencia.com</small>
+                            </div>
+                        </div>
+
+                        <div class="map-placeholder">
+                            <div class="text-center">
+                                <i class="fa-solid fa-map-marked-alt fa-2x mb-2"></i>
+                                <p class="small mb-0">Mapa Interactivo próximamente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-7">
+                    <div class="contact-form-side">
+                        <h3 class="mb-4 text-dark">Envíanos un mensaje</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Nombre Completo</label>
+                                    <input type="text" class="form-control" placeholder="Ej: Juan Pérez">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold">Correo Electrónico</label>
+                                    <input type="email" class="form-control" placeholder="correo@ejemplo.com">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Asunto</label>
+                                <select class="form-control">
+                                    <option>Consulta de Tours</option>
+                                    <option>Información sobre Destinos</option>
+                                    <option>Cotización Personalizada</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold">Mensaje</label>
+                                <textarea class="form-control" rows="5" placeholder="¿En qué podemos ayudarte?"></textarea>
+                            </div>
+
+                            <button type="button" class="btn-send">
+                                Enviar Mensaje <i class="fa-solid fa-paper-plane ms-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center pb-5">
+        <p class="text-muted">Siguenos en redes sociales</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-dark"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+            <a href="#" class="text-dark"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="#" class="text-dark"><i class="fa-brands fa-facebook fa-xl"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
