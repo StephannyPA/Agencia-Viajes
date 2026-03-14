@@ -26,8 +26,9 @@ display:block;
 
 /* HEADER */
 
-/* menú */
+/* inicio de menú */
 
+<<<<<<< HEAD
 .header {
     position: fixed; /* Cambiado a fixed para que te siga al bajar */
     top: 0;
@@ -63,6 +64,73 @@ display:block;
     list-style: none;
     margin: 0;
     padding: 0;
+=======
+header{
+    background-color:#fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 4px var(--colorSombras);
+}
+
+.menu{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins';
+}
+
+.img-logo{
+    height: 3em;
+ 
+}
+
+.btn-menu{
+    display: none;
+}
+
+.enlaces{
+text-align: right;
+}
+.enlaces a{
+color: var(--colorParrafos);
+text-decoration: none;
+font-size: .9em;
+padding: .7em;
+font-weight: 500;
+}
+
+
+/*INICIO DE RESPONSIVE WEB DESING */
+
+@media screen and (max-width:1023px) {
+    .menu{
+flex-direction: column;
+    }
+    .btn-menu{
+        display: block;
+    }
+    .icono-menu{
+        color: var(--colorPrimario);
+        font-size: 2em;
+    }
+    .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 1em;
+    }
+    .enlaces{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+>>>>>>> origin/Stephanny
 }
 
 .menu a {
@@ -582,6 +650,7 @@ margin-top:20px;
 .btn-vermas:hover{
 background:#fa5252;
 }
+<<<<<<< HEAD
 /* CONTACTO */
 *{
     margin: 0;
@@ -972,3 +1041,474 @@ header{
         margin-top: 0;
     }
 }
+=======
+
+
+
+/* INICIO DE DESTINOS */
+
+
+.descripcion-viaje{
+
+padding:80px 0;
+
+background:white;
+
+}
+
+/* Banner destinos*/
+
+    .hero-destinos {
+         background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+    /* Descripcion destinos */
+
+.imagen-viaje{
+
+border-radius:10px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+.texto-viaje h2{
+
+font-weight:bold;
+
+margin-bottom:20px;
+
+}
+
+.texto-viaje p{
+
+color:#555;
+
+margin-bottom:20px;
+
+}
+
+.lista-viaje{
+
+list-style:none;
+
+padding:0;
+
+margin-bottom:25px;
+
+}
+
+.lista-viaje li{
+
+margin-bottom:10px;
+
+font-weight:500;
+
+}
+
+.lista-viaje i{
+
+color:#28a745;
+
+margin-right:8px;
+
+}
+
+/* filtro*/
+
+.filtro-experiencias{
+
+padding:70px 0;
+background:#f8f9fa;
+
+}
+
+.filtro-item{
+
+background:white;
+
+padding:25px 10px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.filtro-item i{
+
+font-size:30px;
+
+margin-bottom:10px;
+
+color:#0d6efd;
+
+}
+
+.filtro-item p{
+
+margin:0;
+font-weight:600;
+
+}
+
+/* hover */
+
+.filtro-item:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+
+}
+
+
+/* lista de destinos */
+.destinos-lista{
+
+padding:80px 0;
+
+background:#f8f9fa;
+
+}
+
+/* card */
+
+.destino-card{
+
+background:white;
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+transition:0.3s;
+
+}
+
+.destino-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* imagen */
+
+.destino-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+/* info */
+
+.destino-info{
+
+padding:20px;
+
+}
+
+/* etiqueta */
+
+.etiqueta{
+
+display:inline-block;
+
+background:#0d6efd;
+
+color:white;
+
+font-size:12px;
+
+padding:4px 10px;
+
+border-radius:20px;
+
+margin-bottom:10px;
+
+}
+
+/* titulo */
+
+.destino-info h3{
+
+font-size:20px;
+
+font-weight:bold;
+
+margin-bottom:10px;
+
+}
+
+/* descripcion */
+
+.destino-info p{
+
+font-size:14px;
+
+color:#555;
+
+margin-bottom:15px;
+
+}
+
+/* link */
+
+.destino-link{
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#0d6efd;
+
+}
+
+.destino-link i{
+
+margin-left:5px;
+
+transition:0.3s;
+
+}
+
+.destino-link:hover i{
+
+transform:translateX(5px);
+
+}
+
+/* boton destinos */
+
+.btn-ver-todos{
+
+display:inline-block;
+
+padding:12px 30px;
+
+background:#0d6efd;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+border-radius:30px;
+
+transition:0.3s;
+
+}
+
+.btn-ver-todos:hover{
+
+background:#084298;
+
+transform:translateY(-2px);
+
+}
+
+/* CTA */
+
+.cta-destinos{
+background:#ff6b6b;
+padding:80px 0;
+color:white;
+}
+
+.btn-demo{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:30px;
+}
+
+
+/* INICIO DE TOURS */
+
+
+.pagina-tours{
+
+padding:80px 0;
+
+background:#f8f9fa;
+
+}
+
+/* Banner tours*/
+
+.hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+
+/* Filtro tours */
+
+.filtro-tours{
+
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+position: sticky;
+top:100px;
+
+}
+
+
+/* Formulario tours */
+
+.form-reserva{
+
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+position: sticky;
+top:100px;
+
+}
+
+.btn-buscar{
+
+width:100%;
+
+padding:10px;
+
+background:#0d6efd;
+
+color:white;
+
+border:none;
+
+border-radius:6px;
+
+}
+
+
+/* cards tours */
+
+.tour-card{
+
+display:flex;
+
+background:white;
+
+border-radius:10px;
+
+overflow:hidden;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.tour-card img{
+
+width:200px;
+
+height:150px;
+
+object-fit:cover;
+
+}
+
+.tour-info{
+
+padding:15px;
+
+}
+
+.tour-info h3{
+
+font-size:18px;
+
+font-weight:bold;
+
+}
+
+.precio{
+
+margin:8px 0;
+
+color:#0d6efd;
+
+}
+
+.ver-tour{
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+
+/* formulario tours */
+
+.form-reserva{
+
+background:white;
+
+padding:25px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+
+position:sticky;
+
+top:100px;
+
+}
+
+.btn-reservar{
+
+width:100%;
+
+padding:10px;
+
+background:#198754;
+
+color:white;
+
+border:none;
+
+border-radius:6px;
+
+}
+
+>>>>>>> origin/Stephanny
