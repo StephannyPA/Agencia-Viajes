@@ -26,48 +26,73 @@ display:block;
 
 /* HEADER */
 
-/* menú */
+/* inicio de menú */
 
 header{
-position:absolute;  
-top:0;
-left:0;
-background-color: #645a5a;
-width:100%;
-
-padding:20px 0;
-
-z-index:1000;
-
+    background-color:#fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 4px var(--colorSombras);
 }
 
 .menu{
-
-display:flex;
-
-justify-content:flex-end;
-
-gap:25px;
-
-list-style:none;
-
-margin:0;
-padding:0;
-
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins';
 }
 
-.menu a{
-
-text-decoration:none;
-
-color:white;
-
-font-weight:500;
-
+.img-logo{
+    height: 3em;
+ 
 }
 
-nav a:hover{
-border-bottom:2px solid white;
+.btn-menu{
+    display: none;
+}
+
+.enlaces{
+text-align: right;
+}
+.enlaces a{
+color: var(--colorParrafos);
+text-decoration: none;
+font-size: .9em;
+padding: .7em;
+font-weight: 500;
+}
+
+
+/*INICIO DE RESPONSIVE WEB DESING */
+
+@media screen and (max-width:1023px) {
+    .menu{
+flex-direction: column;
+    }
+    .btn-menu{
+        display: block;
+    }
+    .icono-menu{
+        color: var(--colorPrimario);
+        font-size: 2em;
+    }
+    .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 1em;
+    }
+    .enlaces{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* banner */
@@ -526,8 +551,6 @@ background:#fa5252;
 
 /* INICIO DE DESTINOS */
 
-/* DESCRIPCION DE TIPO DE VIAJES */
-
 
 .descripcion-viaje{
 
@@ -536,6 +559,24 @@ padding:80px 0;
 background:white;
 
 }
+
+/* Banner destinos*/
+
+    .hero-destinos {
+         background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+    /* Descripcion destinos */
 
 .imagen-viaje{
 
@@ -587,7 +628,7 @@ margin-right:8px;
 
 }
 
-/* FILTRO*/
+/* filtro*/
 
 .filtro-experiencias{
 
@@ -638,7 +679,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 
 
-/* LISTA DESTINOS */
+/* lista de destinos */
 .destinos-lista{
 
 padding:80px 0;
@@ -805,5 +846,172 @@ background:white;
 color:black;
 text-decoration:none;
 border-radius:30px;
+}
+
+
+/* INICIO DE TOURS */
+
+
+.pagina-tours{
+
+padding:80px 0;
+
+background:#f8f9fa;
+
+}
+
+/* Banner tours*/
+
+.hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+
+/* Filtro tours */
+
+.filtro-tours{
+
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+position: sticky;
+top:100px;
+
+}
+
+
+/* Formulario tours */
+
+.form-reserva{
+
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+position: sticky;
+top:100px;
+
+}
+
+.btn-buscar{
+
+width:100%;
+
+padding:10px;
+
+background:#0d6efd;
+
+color:white;
+
+border:none;
+
+border-radius:6px;
+
+}
+
+
+/* cards tours */
+
+.tour-card{
+
+display:flex;
+
+background:white;
+
+border-radius:10px;
+
+overflow:hidden;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.tour-card img{
+
+width:200px;
+
+height:150px;
+
+object-fit:cover;
+
+}
+
+.tour-info{
+
+padding:15px;
+
+}
+
+.tour-info h3{
+
+font-size:18px;
+
+font-weight:bold;
+
+}
+
+.precio{
+
+margin:8px 0;
+
+color:#0d6efd;
+
+}
+
+.ver-tour{
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+
+/* formulario tours */
+
+.form-reserva{
+
+background:white;
+
+padding:25px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+
+position:sticky;
+
+top:100px;
+
+}
+
+.btn-reservar{
+
+width:100%;
+
+padding:10px;
+
+background:#198754;
+
+color:white;
+
+border:none;
+
+border-radius:6px;
+
 }
 
