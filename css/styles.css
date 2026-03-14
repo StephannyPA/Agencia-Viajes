@@ -28,7 +28,7 @@ display:block;
 
 /* inicio de menú */
 
-<<<<<<< HEAD
+
 .header {
     position: fixed; /* Cambiado a fixed para que te siga al bajar */
     top: 0;
@@ -64,7 +64,8 @@ display:block;
     list-style: none;
     margin: 0;
     padding: 0;
-=======
+}
+
 header{
     background-color:#fff;
     position: fixed;
@@ -130,7 +131,7 @@ flex-direction: column;
         flex-direction: column;
         text-align: center;
     }
->>>>>>> origin/Stephanny
+
 }
 
 .menu a {
@@ -650,7 +651,7 @@ margin-top:20px;
 .btn-vermas:hover{
 background:#fa5252;
 }
-<<<<<<< HEAD
+
 /* CONTACTO */
 *{
     margin: 0;
@@ -1041,9 +1042,6 @@ header{
         margin-top: 0;
     }
 }
-=======
-
-
 
 /* INICIO DE DESTINOS */
 
@@ -1510,5 +1508,3 @@ border:none;
 border-radius:6px;
 
 }
-
->>>>>>> origin/Stephanny
