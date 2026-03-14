@@ -28,44 +28,6 @@ display:block;
 
 /* inicio de menú */
 
-
-.header {
-    position: fixed; /* Cambiado a fixed para que te siga al bajar */
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Fondo oscuro semi-transparente para dar contraste */
-    background-color: rgba(0, 0, 0, 0.787); 
-    backdrop-filter: blur(5px);     
-    padding: 15px 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.contenedor-nav {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 0 20px;
-}
-
-.img-logo {
-  height: 60px; 
-    width: auto; 
-    display: block;
-    transition: transform 0.3s ease; 
-}
-
-.menu {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
 header{
     background-color:#fff;
     position: fixed;
@@ -131,75 +93,26 @@ flex-direction: column;
         flex-direction: column;
         text-align: center;
     }
-
 }
 
-.menu a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
 
-.menu a:hover {
-    color: #fb4816; /* Un color de acento (rojo/naranja) que resalte */
-}
 
-.menu-hamburguesa, .btn-cerrar{
-        display: none;
-    }
-/* 2. CELULARES GRANDES / TABLETS VERTICALES (Máximo 768px)
-   Activación del Menú Hamburguesa y Grid */
-@media screen and (max-width: 768px) {
-    /* --- NAVEGACIÓN MÓVIL (HAMBURGUESA) --- */
-    .menu-hamburguesa {
-        display: block; /* Aparecen las 3 líneas */
-        font-size: 2rem;
-        cursor: pointer;
-        color: #6d6d6d;
-    }
+/* Banner inicio*/
 
-    .menu {
-        position: fixed;
-        top: 0;
-        right: -100%; /* Oculto a la derecha */
-        width: 100%;
-        height: 100vh;
-        background: rgba(33, 33, 33, 0.95); 
-        backdrop-filter: blur(15px); 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 9999;
-    }
+.hero-inicio{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('../img/banner.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-    .menu.active {
-        right: 0; /* Desliza hacia adentro */
-    }
-
-    .btn-cerrar {
-        display: block; /* Aparece la X */
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        color: #6d6d6d;
-        font-size: 2.5rem;
-        cursor: pointer;
-    }
-
-    .menu li {
-        margin: 20px 0;
-    }
-
-    .menu li a {
-        color: #fff;
-        font-size: 1.8rem;
-        text-transform: uppercase;
-    }
-}
 /* banner */
 
 
@@ -557,7 +470,7 @@ padding:120px 0;
 /* TOUR PAQUETES */
 
 .tour-paquetes{
-background:#b197fc;
+background:#d9d5e4;
 padding:80px 0;
 }
 
@@ -652,187 +565,8 @@ margin-top:20px;
 background:#fa5252;
 }
 
-/* CONTACTO */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f6f3;
-}
 
-/* HEADER */
-header{
-    background-color: #ffffff;
-    padding: 18px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.logo{
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #0f766e;
-    margin: 0;
-}
-
-.menu{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li a{
-    text-decoration: none;
-    color: #374151;
-    font-weight: 500;
-}
-
-.menu li a:hover{
-    color: #f48a67;
-}
-
-/* BANNER */
-/* HEADER */
-header{
-    background-color: #ffffff;
-    padding: 18px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    margin-bottom: 0;
-}
-
-.logo{
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #0f766e;
-    margin: 0;
-}
-
-.menu{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li a{
-    text-decoration: none;
-    color: #374151;
-    font-weight: 500;
-}
-
-.menu li a:hover{
-    color: #f48a67;
-}
-
-/* BANNER */
-.banner{
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    min-height: 500px;
-    max-height: 750px;
-    overflow: hidden;
-}
-
-.banner img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 25%;
-    display: block;
-}
-
-.overlay-hero{
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.20);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.banner-texto{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    z-index: 2;
-    width: 100%;
-    padding: 0 20px;
-}
-
-@media (max-width: 991px){
-    .banner{
-        height: 48vh;
-        min-height: 320px;
-    }
-
-    .banner-texto h2{
-        font-size: 2.2rem;
-    }
-
-    .banner-texto p{
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
-}
-
-/* RESPONSIVE */
-@media (max-width: 991px){
-    .menu{
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 14px;
-        margin-top: 15px;
-    }
-
-    .banner{
-        height: 360px;
-    }
-
-    .banner img{
-        object-position: center 22%;
-    }
-
-    .banner-texto h2{
-        font-size: 2.3rem;
-    }
-
-    .banner-texto p{
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
-}
-
-@media (max-width: 576px){
-    .banner{
-        height: 280px;
-    }
-
-    .banner img{
-        object-position: center 25%;
-    }
-
-    .banner-texto h2{
-        font-size: 1.8rem;
-    }
-
-    .banner-texto p{
-        font-size: 0.9rem;
-        letter-spacing: 1px;
-    }
-}
 
 /* CONTACTO */
 .contacto{
@@ -1433,14 +1167,11 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
 }
 
-.tour-card img{
-
-width:200px;
-
-height:150px;
-
-object-fit:cover;
-
+.tour-card img {
+    width: 200px;           
+    height: 150px;          
+    object-fit: cover;      
+    flex-shrink: 0;         
 }
 
 .tour-info{
@@ -1449,12 +1180,11 @@ padding:15px;
 
 }
 
-.tour-info h3{
-
-font-size:18px;
-
-font-weight:bold;
-
+.tour-card img {
+    width: 200px;           /* ancho fijo */
+    height: 210px;          /* alto fijo */
+    object-fit: cover;      /* recorta sin distorsionar */
+    flex-shrink: 0;         /* evita que se achique */
 }
 
 .precio{
@@ -1465,12 +1195,10 @@ color:#0d6efd;
 
 }
 
-.ver-tour{
-
-text-decoration:none;
-
-font-weight:600;
-
+.ver-tour {
+    text-decoration: none;
+    font-weight: 600;
+    color: #198754;
 }
 
 
@@ -1508,3 +1236,23 @@ border:none;
 border-radius:6px;
 
 }
+
+
+/* INICIO CONTACTOS*/
+
+/* Banner contacto*/
+
+.hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('../img/Banner-contacto4.png');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        

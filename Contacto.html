@@ -12,38 +12,32 @@
 <body>
 
   <!-- HEADER / MENU -->
-  <header>
-    <nav class="contenedor-nav">
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/logo.png" alt="Logo Agencia de Viajes" class="img-logo" />
-            </a>
-        </div>
-        <div class="menu-hamburguesa" id="btn-abrir">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+ <header id="header">       
+<nav class="menu">         
+    <div class="logo">           
+        <a href="#">             
+            <img src="img/LOGO AGENCIA.jpeg" alt="" class="img-fluid img-logo" />           
+        </a>           
+        <a href="#" class="btn-menu" id="btn-menu">             
+            <i class="fa-solid fa-bars icono-menu"></i>           
+        </a>         
+    </div>         
+    <div class="enlaces" id="enlaces">           
+        <a href="index.html">INICIO</a>          
+        <a href="destinos.html">DESTINOS</a>           
+        <a href="tour.html">TOURS</a>           
+        <a href="contacto.html">CONTACTOS</a>                 
+        </div>       
+        </nav>     
+    </header>
 
-        <ul class="menu" id="menu-enlaces">
-            <div class="btn-cerrar" id="btn-cerrar">
-                <i class="fa-solid fa-xmark"></i>
-            </div>            
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="destinos.html">Destinos</a></li>
-            <li><a href="tours.html">Tours</a></li>
-            <li><a href="paquetes.html">Paquetes</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
-<section class="banner">
-  <img src="img/Banner-contacto4.png" alt="Banner contacto">
+<!--BANNER -->
 
-  <div class="overlay-hero">
-    <div class="banner-texto">
-      <h2>Descubre nuevos destinos</h2>
-      <p>| EXPLORA SIN LÍMITES |</p>
-    </div>
-  </div>
+<section class="hero">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Contáctanos</h1>
+            <p class="lead">Tu próxima aventura empieza con un mensaje.</p>
+        </div>
 </section>
 
   <!-- CONTACTO -->
@@ -133,6 +127,9 @@
       </div>
     </section>
   </main>
+  
+<script src="js/WE_MC_02_headroom.min.js"></script>
+<script src="js/WE_MC_04_menu-flex.js"></script>
 
 </body>
 </html>
