@@ -1,39 +1,13 @@
-/* GENERAL */
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+/* HEADER PATRICK 
 
-body{
-font-family: Arial, Helvetica, sans-serif;
-background:#e4e4e4;
-line-height:1.6;
-}
-
-
-h2{
-margin-bottom:40px;
-text-align:center;
-font-size:32px;
-}
-
-img{
-width:100%;
-display:block;
-}
-
-/* HEADER */
-
-/* menú */
+--------menú 
 
 header {
-    position: fixed; /* Cambiado a fixed para que te siga al bajar */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    /* Fondo oscuro semi-transparente para dar contraste */
     background-color: rgba(0, 0, 0, 0.787); 
     backdrop-filter: blur(5px);     
     padding: 15px 0;
@@ -74,469 +48,22 @@ header {
 }
 
 .menu a:hover {
-    color: #fb4816; /* Un color de acento (rojo/naranja) que resalte */
+    color: #fb4816; 
 }
 
 .menu-hamburguesa, .btn-cerrar{
         display: none;
-    }
-/* banner */
+    } */
 
 
-.banner img{
-width:100%;
-height:99vh;   
-object-fit:cover;
-display:block;
-}
-
-.banner::after{
-
-content:"";
-
-position:absolute;
-left:0;
-bottom:0;
-
-width:100%;
-height:120px;
-
-background:linear-gradient(
-to bottom,
-rgba(255,255,255,0),
-rgba(255,255,255,1)
-);
-
-}
-
-.banner-texto{
-
- position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    color: white;
-    padding: 0 20px;
-
-}
-
-.banner-texto h2{
-font-size:60px;
-font-weight:bold;
-
-text-shadow:
-1px 1px 0 #000,
-2px 2px 0 #000,
-3px 3px 0 #000,
-4px 4px 8px rgba(0,0,0,0.6);
-}
-
-.banner-texto p{
-font-weight:bold;
-font-size:40px;
-letter-spacing:2px;
-color: #000;
-}
-
-/* Banner texto responsive */
-@media (max-width: 576px) {    
-
-    .banner-texto h2 {
-        font-size: 40px; 
-        line-height: 1.2; 
-    }
-
-    .banner-texto p {
-        font-size: 17px; 
-    }
-
-    .banner img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.banner {
-    position: relative;
-    width: 100%;
-    height: 400px; /* ajusta la altura del banner */
-    overflow: hidden;
-}
-
-}
-
-/* POR QUE CON NOSOTROS */
-
-.por-que-nosotros{
-background:#ffffff;
-padding:75px 0;
-}
-
-.beneficio{
-
-display:flex;
-align-items:center;
-gap:12px;
-
-}
-
-.icono{
-
-font-size:28px;
-color:#ff6b6b;
-
-}
-
-.beneficio h3{
-
-margin:0;
-font-weight:bold;
-
-
-}
-
-/* mobile */
-
-@media (max-width:576px){
-
-.beneficio{
-
-flex-direction:column;
-text-align:center;
-margin-bottom:30px;
-}
-
-.icono{
-
-font-size:32px;
-
-}
-
-}
-
-/* PASOS PARA REGISTRAR VIAJE */
-
-
-.pasos-viaje{
-
-padding:80px 0;
-background:#f8f9fa;
-
-}
-
-
-.imagen-pasos img{
-
-width:100%;
-border-radius:12px;
-
-}
-
-
-.paso{
-
-background:white;
-
-padding:25px;
-
-border-radius:12px;
-
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-
-text-align:center;
-
-transition:0.3s;
-
-}
-
-.paso:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-
-}
-
-
-.icono-paso{
-
-font-size:35px;
-
-color:#ff6b6b;
-
-margin-bottom:10px;
-
-}
-
-
-.paso h3{
-
-font-size:18px;
-font-weight:bold;
-
-margin-bottom:8px;
-
-}
-
-
-.paso p{
-
-font-size:14px;
-color:#555;
-
-}
-
-/* SECCION CTA VIAJE */
-
-.cta-viaje{
-padding:120px 0;
-}
-
-
-.btn-cta{
-
-display:inline-block;
-
-margin-top:20px;
-
-padding:12px 30px;
-
-background:#ff6b6b;
-color:white;
-
-text-decoration:none;
-font-weight:bold;
-
-border-radius:30px;
-
-}
-
-/* DESTINOS POPULARES */
-
-.destinos-populares{
-padding:80px 0;
-background:#f1f3f5;
-}
-
-.grid-destinos{
-
-display:grid;
-grid-template-columns:repeat(3,1fr);
-grid-auto-rows:200px;
-gap:15px;
-
-margin-top:40px;
-}
-
-.destino{
-position:relative;
-overflow:hidden;
-border-radius:10px;
-display:block;
-}
-
-.destino img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
-
-.overlay{
-
-position:absolute;
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,0.6);
-
-color:white;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-text-align:center;
-
-opacity:0;
-transition:0.3s;
-
-}
-
-.overlay h3{ 
-
-    font-size:30px; 
-}
-
-.destino:hover .overlay{
-opacity:1;
-}
-
-
-.destino.grande{
-grid-column:span 2;
-grid-row:span 2;
-}
-
-
-@media (max-width:576px){
-
-.grid-destinos{
-grid-template-columns:1fr;
-}
-
-.destino.grande{
-grid-column:span 1;
-grid-row:span 1;
-}
-
-.overlay{
-opacity:1;
-justify-content:flex-end;
-align-items:flex-start;
-}
-
-.overlay h3{
-
-position:absolute;
-bottom:20px;
-left:20px;
-
-color:white;
-font-size:22px;
-font-weight:bold;
-
-text-shadow:0 2px 10px rgba(0,0,0,0.6);
-
-}
-
-
-}
-
-/* PROMOCIONES */
-
-.promo-viaje{
-
-padding:120px 0;
-
-}
-
-
-/* TOUR PAQUETES */
-
-.tour-paquetes{
-background:#b197fc;
-padding:80px 0;
-}
-
-.paquete{
-background:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
-min-height:200px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.paquete h3{
-margin-bottom:15px;
-}
-
-.paquete-card{
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.paquete-card:hover{
-transform:translateY(-5px);
-}
-
-.paquete-card img{
-height:200px;
-object-fit:cover;
-}
-
-.paquete-info{
-padding:20px;
-text-align:center;
-}
-
-.paquete-info h3{
-margin-bottom:10px;
-}
-
-.duracion{
-font-size:14px;
-margin-bottom:10px;
-color:#555;
-}
-
-.precio{
-font-size:18px;
-margin:15px 0;
-color:#ff6b6b;
-}
-
-.btn-paquete{
-display:inline-block;
-padding:10px 20px;
-background:#ff6b6b;
-color:white;
-text-decoration:none;
-border-radius:5px;
-}
-
-.btn-paquete:hover{
-background:#fa5252;
-}
-
-/* FOOTER */
-
-footer{
-background:#343a40;
-color:white;
-padding:40px 0;
-text-align:center;
-}
-
-
-/* BOTONES DE LAS SECCIONES */
-
-
-.btn-vermas{
-display:inline-block;
-padding:12px 25px;
-background:#ff6b6b;
-color:white;
-text-decoration:none;
-border-radius:6px;
-margin-top:20px;
-}
-
-.btn-vermas:hover{
-background:#fa5252;
-}
 /* Fin Inicio */
 
-/* --- INICIO SECCIÓN DESTINOS --- */
+/* --- INICIO SECCIÓN DESTINOS PATRICK --- 
 
-/*  HERO BANNER */
+/*  HERO BANNER 
 .hero-banner {
     position: relative;
-    height: 60vh; /* Altura ajustada para destinos */
+    height: 60vh; /* Altura ajustada para destinos 
     overflow: hidden;
 }
 
@@ -552,7 +79,7 @@ background:#fa5252;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Oscurece un poco la imagen para leer el texto */
+    background: rgba(0, 0, 0, 0.5); /* Oscurece un poco la imagen para leer el texto *
     display: flex;
     justify-content: center;
     align-items: center;
@@ -578,7 +105,7 @@ background:#fa5252;
 
 /* CONTENIDO Y FILTROS */
 
-/* Contenedor de la sección de filtros */
+/* Contenedor de la sección de filtros 
 .seccion-filtros {
     padding: 30px 0;
     
@@ -590,15 +117,15 @@ background:#fa5252;
     padding: 0 20px;
     display: flex;
     align-items: center;
-    gap: 15px; /* Espacio entre botones */
+    gap: 15px; /* Espacio entre botones 
 }
 
-/* Estilo de los botones de texto (Costa, Sierra, Selva) */
+/* Estilo de los botones de texto (Costa, Sierra, Selva) 
 .btn-filtro {
-    background-color: #ededed; /* El gris suave de tu imagen */
+    background-color: #ededed; /* El gris suave de tu imagen
     border: none;
     padding: 10px 35px;
-    border-radius: 50px; /* Botones tipo cápsula */
+    border-radius: 50px; /* Botones tipo cápsula
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #444;
@@ -612,9 +139,9 @@ background:#fa5252;
     transform: translateY(-2px);
 }
 
-/* Estilo para el icono de filtro aparte */
+/* Estilo para el icono de filtro aparte 
 .btn-icono-filtro {
-    background-color: transparent; /* Sin fondo */
+    background-color: transparent; /* Sin fondo 
     border: none;
     font-size: 1.2rem;
     color: #333;
@@ -625,10 +152,10 @@ background:#fa5252;
 }
 
 .btn-icono-filtro:hover {
-    color: #007BFF; /* Cambia a azul al pasar el mouse */
+    color: #007BFF; /* Cambia a azul al pasar el mouse 
 }
 
-/*CONTENIDO PRINCIPAL*/
+/*CONTENIDO PRINCIPAL
 .contenido-principal {
     max-width: 1200px;
     margin: 60px auto;
@@ -654,7 +181,7 @@ background:#fa5252;
     height: 40px; 
 }
 
-/* 4. EL MOSAICO (GRID) */
+/* 4. EL MOSAICO (GRID) 
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -672,12 +199,12 @@ background:#fa5252;
     transform: translateY(-5px);
 }
 
-/* Card Vertical Destacada */
+/* Card Vertical Destacada 
 .card-vertical { 
     grid-row: span 2; 
 }
 
-/* Paginación */
+/* Paginación 
 .paginacion {
     display: flex;
     justify-content: center;
@@ -696,7 +223,7 @@ cursor: pointer;
 background: #007BFF; 
 }
 
-/* GRID INFERIOR */
+/* GRID INFERIOR 
 .grid-inferior {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -709,14 +236,14 @@ background: #007BFF;
     border-radius: 20px;
 }
 
-/* Ajustes de Testimonios */
+/* Ajustes de Testimonios 
 .card-testimonio {
     transition: 0.3s;
 }
 .card-testimonio:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
-/* Estilo para las cápsulas de filtro con texto */
+/* Estilo para las cápsulas de filtro con texto 
 .capsula {
     display: flex;
     justify-content: center;
@@ -726,11 +253,11 @@ background: #007BFF;
     font-size: 0.9rem;
 }
 
-/* Ajustes de las Cards para Imágenes */
+/* Ajustes de las Cards para Imágenes 
 .card {
     position: relative;
     overflow: hidden;
-    text-decoration: none; /* Quitar subrayado del link */
+    text-decoration: none; /* Quitar subrayado del link 
     color: white;
 }
 
@@ -774,7 +301,7 @@ background: #007BFF;
     transform: translateY(0);
 }
 
-/* Grid Inferior Horizontal */
+/* Grid Inferior Horizontal 
 .card-horizontal {
     position: relative;
     height: 200px;
@@ -802,10 +329,10 @@ background: #007BFF;
     font-weight: 700;
 }
 
-/* --- ESTILOS DE TARJETAS INFERIORES (LIMA Y PUNO) --- */
+/* --- ESTILOS DE TARJETAS INFERIORES (LIMA Y PUNO) --- 
 .card-horizontal {
     position: relative;
-    height: 250px; /* Un poco más altas para lucir el texto al centro */
+    height: 250px; /* Un poco más altas para lucir el texto al centro 
     overflow: hidden;
     border-radius: 20px;
     display: block;
@@ -822,7 +349,7 @@ background: #007BFF;
 .info-horizontal {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* Capa oscura inicial */
+    background: rgba(0, 0, 0, 0.4); /* Capa oscura inicial 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -842,33 +369,33 @@ background: #007BFF;
     transition: transform 0.4s ease;
 }
 
-/* Efecto Hover para Lima y Puno */
+/* Efecto Hover para Lima y Puno 
 .card-horizontal:hover img {
     transform: scale(1.1);
 }
 
 .card-horizontal:hover .info-horizontal {
-    backdrop-filter: blur(3px); /* Efecto de desenfoque moderno */
+    backdrop-filter: blur(3px); /* Efecto de desenfoque moderno 
 }
 
 .card-horizontal:hover h4 {
     transform: scale(1.1);
-}
+}*/
 
 
 /* 
-   --- SECCIÓN DE MEDIA QUERIES (RESPONSIVE) */
+   --- SECCIÓN DE MEDIA QUERIES (RESPONSIVE) PATRICK
 
-/* 1. TABLETS Y LAPTOPS PEQUEÑAS (Máximo 1024px)*/
+/* 1. TABLETS Y LAPTOPS PEQUEÑAS (Máximo 1024px)
 @media screen and (max-width: 1024px) {
     .grid-layout {
-        grid-template-columns: repeat(2, 1fr); /* Cambio a 2 columnas */
+        grid-template-columns: repeat(2, 1fr); /* Cambio a 2 columnas 
         grid-auto-rows: 220px;
         gap: 20px;
     }
 
     .card-vertical {
-        grid-row: span 1; /* Eliminamos el doble alto para evitar huecos */
+        grid-row: span 1; /* Eliminamos el doble alto para evitar huecos 
     }
 
     .btn-filtro {
@@ -882,11 +409,11 @@ background: #007BFF;
 }
 
 /* 2. CELULARES GRANDES / TABLETS VERTICALES (Máximo 768px)
-   Activación del Menú Hamburguesa y Grid */
+   Activación del Menú Hamburguesa y Grid 
 @media screen and (max-width: 768px) {
-    /* --- NAVEGACIÓN MÓVIL (HAMBURGUESA) --- */
+    /* --- NAVEGACIÓN MÓVIL (HAMBURGUESA) --- 
     .menu-hamburguesa {
-        display: block; /* Aparecen las 3 líneas */
+        display: block; /* Aparecen las 3 líneas 
         font-size: 2rem;
         cursor: pointer;
         color: #6d6d6d;
@@ -895,7 +422,7 @@ background: #007BFF;
     .menu {
         position: fixed;
         top: 0;
-        right: -100%; /* Oculto a la derecha */
+        right: -100%; /* Oculto a la derecha 
         width: 100%;
         height: 100vh;
         background: rgba(33, 33, 33, 0.95); 
@@ -909,11 +436,11 @@ background: #007BFF;
     }
 
     .menu.active {
-        right: 0; /* Desliza hacia adentro */
+        right: 0; /* Desliza hacia adentro 
     }
 
     .btn-cerrar {
-        display: block; /* Aparece la X */
+        display: block; /* Aparece la X 
         position: absolute;
         top: 30px;
         right: 30px;
@@ -953,7 +480,7 @@ background: #007BFF;
      margin-top: 80px; 
     }
 }
-/* --- EFECTO HOVER (FUERA DE LAS MEDIA QUERIES) --- */
+/* --- EFECTO HOVER (FUERA DE LAS MEDIA QUERIES) --- 
 .card img, .card-horizontal img {
     transition: transform 0.5s ease-in-out;
 }
