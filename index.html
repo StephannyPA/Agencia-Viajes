@@ -53,34 +53,46 @@
         </nav>     
     </header>-->
 
-<header>
+  <header>
     <nav class="contenedor-nav">
         <div class="logo">
-        <a href="index.html">
-        <img src="img/logo.png" alt="Logo Agencia de Viajes" class="img-logo">
-       </a>
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo Agencia de Viajes" class="img-logo" />
+            </a>
         </div>
-        <ul class="menu">
+        <div class="menu-hamburguesa" id="btn-abrir">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="menu" id="menu-enlaces">
+            <div class="btn-cerrar" id="btn-cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </div>            
             <li><a href="index.html">Inicio</a></li>
             <li><a href="destinos.html">Destinos</a></li>
-            <li><a href="tours.html">Tours</a></li>
-            <li><a href="paquetes.html">Paquetes</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="tour.html">Tours</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
         </ul>
     </nav>
 </header>
 
 
 
+
 <!--BANNER -->
 
-<section class="hero-inicio">
-        <div class="container">
-            <h1 class="display-3 fw-bold">Descubre nuevos destinos</h1>
-            <p class="lead">|EXPLORA SIN LIMITES|</p>
-        </div>
-</section>
 
+ <section class="hero-banner">
+        <div class="overlay-hero">
+            <div class="texto-banner">
+                <h1>Descubre tu Próxima Aventura</h1>
+                <p>|EXPLORA SIN LIMITES|</p>
+            </div>
+        </div>
+        <img src="img/banner.jpeg" alt="Destinos Perú" />
+    </section>
+
+    
 <!--BANNER 
 <section class="banner">
 
@@ -365,7 +377,7 @@ Explorar destinos
 Obtén hasta 20% de descuento en paquetes seleccionados.
 </p>
 
-<a href="paquetes.html" class="btn-cta">
+<a href="tour.html" class="btn-cta">
 Ver ofertas
 </a>
 

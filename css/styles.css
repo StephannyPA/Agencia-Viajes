@@ -97,55 +97,6 @@ flex-direction: column;
 
 
 
-/* Banner inicio*/
-
-.hero-inicio {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../img/banner.jpeg');
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-/* banner */
-
-
-.banner img {
-    width: 100%;
-    height: 99vh;
-    object-fit: cover;
-    display: block;
-}
-
-.banner::after {
-
-    content: "";
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 120px;
-
-    background: linear-gradient(to bottom,
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 1));
-
-}
-
-.banner-texto {
-
-    position: absolute;
-}
-
-
 /* HEADER PATRICK */
 
 /*  menú */
@@ -204,16 +155,16 @@ header {
     display: none;
 }
 
-*/
+
 /* Fin Inicio */
 
 /* --- INICIO SECCIÓN DESTINOS PATRICK --- */
 
 /*  HERO BANNER */
+
 .hero-banner {
     position: relative;
-    height: 50vh;
-    /* Altura ajustada para destinos */
+    height: 60vh; /* Altura ajustada para destinos */
     overflow: hidden;
 }
 
@@ -225,118 +176,70 @@ header {
 
 .overlay-hero {
     position: absolute;
-
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
+    background: rgba(0, 0, 0, 0.5); /* Oscurece un poco la imagen para leer el texto */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+}
 
+.texto-banner {
     text-align: center;
     color: white;
+}
+
+.texto-banner h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.texto-banner p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+   /* CONTENIDO Y FILTROS */
+
+/* Contenedor de la sección de filtros */
+.seccion-filtros {
+    padding: 30px 0;
+    
+}
+
+.container-filtros {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
-
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre botones */
 }
 
-.banner-texto h2 {
-    font-size: 60px;
-    font-weight: bold;
-
-    text-shadow:
-        1px 1px 0 #000,
-        2px 2px 0 #000,
-        3px 3px 0 #000,
-        4px 4px 8px rgba(0, 0, 0, 0.6);
+/* Estilo de los botones de texto (Costa, Sierra, Selva) */
+.btn-filtro {
+    background-color: #ededed; /* El gris suave de tu imagen */
+    border: none;
+    padding: 10px 35px;
+    border-radius: 50px; /* Botones tipo cápsula */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.banner-texto p {
-    font-weight: bold;
-    font-size: 40px;
-    letter-spacing: 2px;
-    color: #000;
+.btn-filtro:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: translateY(-2px);
 }
-
-/* Banner texto responsive */
-@media (max-width: 576px) {
-
-    .banner-texto h2 {
-        font-size: 40px;
-        line-height: 1.2;
-    }
-
-    .banner-texto p {
-        font-size: 17px;
-    }
-
-    .banner img {
-
-        background: rgba(0, 0, 0, 0.5);
-        /* Oscurece un poco la imagen para leer el texto **/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-    }
-
-    .texto-banner {
-        text-align: center;
-        color: white;
-    }
-
-    .texto-banner h1 {
-        font-size: 4rem;
-        font-weight: 800;
-        letter-spacing: 5px;
-        margin-bottom: 10px;
-    }
-
-    .texto-banner p {
-        font-size: 1.2rem;
-        font-weight: 300;
-    }
-
-    /* CONTENIDO Y FILTROS */
-
-    /* Contenedor de la sección de filtros */
-    .seccion-filtros {
-        padding: 30px 0;
-
-    }
-
-    .container-filtros {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-       
-    }
-
-    /* Estilo de los botones de texto (Costa, Sierra, Selva) */
-    .btn-filtro {
-        background-color: #ededed;
-        /* El gris suave de tu imagen*/
-        border: none;
-        padding: 10px 35px;
-        border-radius: 50px;
-        /* Botones tipo cápsula*/
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        color: #444;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .btn-filtro:hover {
-        background-color: #007BFF;
-        color: white;
-        transform: translateY(-2px);
-    }
 
     /* Estilo para el icono de filtro aparte */
     .btn-icono-filtro {
@@ -492,6 +395,7 @@ header {
         margin: 0;
         font-size: 1.5rem;
         font-weight: 700;
+        color: white;
     }
 
     .card-overlay p {
@@ -500,6 +404,7 @@ header {
         opacity: 0;
         transform: translateY(10px);
         transition: 0.3s ease;
+        color: white;
     }
 
     .card:hover .card-overlay p {
@@ -531,7 +436,7 @@ header {
         overflow: hidden;
     }
 
-}
+
 
 /* POR QUE CON NOSOTROS */
 
@@ -588,7 +493,7 @@ header {
 .pasos-viaje {
 
     padding: 80px 0;
-    background: #f8f9fa;
+    background: #dbdee1;
 
 }
 
@@ -1571,7 +1476,7 @@ footer {
 
 /* INICIO CONTACTOS*/
 
-/* Banner contacto
+/* Banner contacto*/
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('../img/Banner-contacto4.png');
@@ -1657,8 +1562,7 @@ footer {
 
 
 /* 
-   --- SECCIÓN DE MEDIA QUERIES (RESPONSIVE) PATRICK 
-
+   --- SECCIÓN DE MEDIA QUERIES (RESPONSIVE) PATRICK */
 @media screen and (max-width: 1024px) {
     .grid-layout {
         grid-template-columns: repeat(2, 1fr);
@@ -1680,7 +1584,7 @@ footer {
     }
 }
 
-/* 2. CELULARES GRANDES / TABLETS VERTICALES (Máximo 768px)
+/* 2. CELULARES GRANDES / TABLETS VERTICALES (Máximo 768px)*/
 
 @media screen and (max-width: 768px) {
 
@@ -1755,20 +1659,19 @@ footer {
     }
 }
 
-/* --- EFECTO HOVER (FUERA DE LAS MEDIA QUERIES) --- 
-.card img,
-.card-horizontal img {
+/* --- EFECTO HOVER (FUERA DE LAS MEDIA QUERIES) --- */
+.card img, .card-horizontal img {
     transition: transform 0.5s ease-in-out;
 }
 
-.card:hover img,
-.card-horizontal:hover img {
-    transform: scale(1.1);
+.card:hover img, .card-horizontal:hover img {
+    transform: scale(1.1); 
 }
 
 .card-horizontal:hover .info-horizontal {
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: none;
-}
+    backdrop-filter: none; 
+} 
+
 
 /* FIN DESTINOS */

@@ -12,33 +12,40 @@
 <body>
 
   <!-- HEADER / MENU -->
- <header id="header">       
-<nav class="menu">         
-    <div class="logo">           
-        <a href="#">             
-            <img src="img/LOGO AGENCIA.jpeg" alt="" class="img-fluid img-logo" />           
-        </a>           
-        <a href="#" class="btn-menu" id="btn-menu">             
-            <i class="fa-solid fa-bars icono-menu"></i>           
-        </a>         
-    </div>         
-    <div class="enlaces" id="enlaces">           
-        <a href="index.html">INICIO</a>          
-        <a href="destinos.html">DESTINOS</a>           
-        <a href="tour.html">TOURS</a>           
-        <a href="contacto.html">CONTACTOS</a>                 
-        </div>       
-        </nav>     
-    </header>
+  <header>
+    <nav class="contenedor-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo Agencia de Viajes" class="img-logo" />
+            </a>
+        </div>
+        <div class="menu-hamburguesa" id="btn-abrir">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="menu" id="menu-enlaces">
+            <div class="btn-cerrar" id="btn-cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </div>            
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="tour.html">Tours</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
 <!--BANNER -->
 
-<section class="hero">
-        <div class="container">
-            <h1 class="display-3 fw-bold">Contáctanos</h1>
-            <p class="lead">Tu próxima aventura empieza con un mensaje.</p>
+<section class="hero-banner">
+        <div class="overlay-hero">
+            <div class="texto-banner">
+                <h1>Contáctanos</h1>
+                <p>Tu próxima aventura empieza con un mensaje.</p>
+            </div>
         </div>
-</section>
+        <img src="img/banner-contacto.png" alt="Destinos Perú" />
+    </section>
 
   <!-- CONTACTO -->
   <main>
