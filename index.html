@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
@@ -25,11 +26,13 @@
   <!-- LIBRERÍA DE DE JQUERY -->
    <script src="js/WE_MC_03_jquery.js"></script>
 
+
 </head>
 
 <body>
 
-<!-- HEADER / MENU -->
+<!-- HEADER / MENU 
+
 
 <header id="header">       
 <nav class="menu">         
@@ -48,7 +51,25 @@
         <a href="contacto.html">CONTACTOS</a>                 
         </div>       
         </nav>     
-    </header>
+    </header>-->
+
+<header>
+    <nav class="contenedor-nav">
+        <div class="logo">
+        <a href="index.html">
+        <img src="img/logo.png" alt="Logo Agencia de Viajes" class="img-logo">
+       </a>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="paquetes.html">Paquetes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
 
 
 <!--BANNER -->
@@ -59,6 +80,19 @@
             <p class="lead">|EXPLORA SIN LIMITES|</p>
         </div>
 </section>
+
+<!--BANNER 
+<section class="banner">
+
+<img src="img/banner.jpeg" alt="banner">
+
+<div class="banner-texto">
+<h2>Descubre nuevos destinos</h2>
+<p>EXPLORA SIN LÍMITES</p>
+</div>
+
+</section>-->
+
 
 <!-- CUERPO -->
 
@@ -124,7 +158,9 @@
 <div class="col-lg-6">
 
 <div class="imagen-pasos">
+
 <img src="img/pensar.jpg" alt="Viaje">
+
 </div>
 
 </div>
@@ -249,6 +285,7 @@ Explorar destinos
 
 
 
+
 <a href="destinos.html" class="destino grande">
 <img src="img/cusco.jpg" alt="Cusco">
 
@@ -261,6 +298,7 @@ Explorar destinos
 
 <img src="img/lima.jpg" alt="Lima">
 
+
 <div class="overlay">
 
 <h3>Lima</h3>
@@ -268,30 +306,37 @@ Explorar destinos
 </a>
 
 <a href="destinos.html" class="destino">
+
 <img src="img/arequipa.jpg" alt="Arequipa">
+
+
 <div class="overlay">
 <h3>Arequipa</h3>
 </div>
 </a>
 
 
-
 <a href="destinos.html" class="destino">
 <img src="img/huacachina.webp" alt="Ica">
+
 <div class="overlay">
 <h3>Ica</h3>
 </div>
 </a>
 
 <a href="destinos.html" class="destino">
+
 <img src="img/amazonas.jpg" alt="Loreto">
+
 <div class="overlay">
 <h3>Loreto</h3>
 </div>
 </a>
 
 <a href="destinos.html" class="destino">
+
 <img src="img/puno.webp" alt="Puno">
+
 <div class="overlay">
 <h3>Puno</h3>
 </div>
@@ -347,8 +392,7 @@ Ver ofertas
 <article class="paquete-card">
 
 <img src="img/machu-pichu.jpg" alt="Tour Cusco">
-
-<div class="paquete-info">
+    <div class="paquete-info">
 
 <h3>Cusco & Machu Picchu</h3>
 
@@ -377,7 +421,9 @@ Desde <strong>$450</strong>
 
 <article class="paquete-card">
 
+
 <img src="img/cañon-colca.jpg" alt="Tour Arequipa">
+
 
 <div class="paquete-info">
 
@@ -408,7 +454,9 @@ Desde <strong>$320</strong>
 
 <article class="paquete-card">
 
+
 <img src="img/huacachina.webp" alt="Tour Ica">
+
 
 <div class="paquete-info">
 
@@ -453,19 +501,16 @@ Ver todos los destinos
 
 <!-- FOOTER -->
 
-<footer>
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2026 Agencia de Viajes. Todos los derechos reservados.</p>
-            <div class="mt-3">
-                <i class="fa-brands fa-instagram mx-2"></i>
-                <i class="fa-brands fa-facebook mx-2"></i>
-                <i class="fa-brands fa-twitter mx-2"></i>
-            </div>
+ <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0">© 2026 Viaje Andino - Todos los derechos reservados</p>
         </div>
     </footer>
 
+<script src="js/menu.js"></script>
 <script src="js/WE_MC_02_headroom.min.js"></script>
 <script src="js/WE_MC_04_menu-flex.js"></script>
+
 
 </body>
 </html>
